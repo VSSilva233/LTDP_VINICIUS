@@ -1,0 +1,13 @@
+
+#container{
+
+		background-color: rgb(172,221,215);
+		width: 60%; /*largura*/
+		height: 100%; /*altura*/
+		margin: 0px auto 0px auto;
+		border-color: black;
+		border-style: solid;
+		border-width: 1px;
+		text-align: center;		
+	}
+	#txt_name{
