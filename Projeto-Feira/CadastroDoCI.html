@@ -2,32 +2,46 @@
 <head>
 	<title>Cadastro do Centro de Interesse</title>
 	<link href="style.css" rel="stylesheet" />	
+	<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </head>
 	
 	<body>
 	<form action="#">
 		<div id="container">
-		<center><h1>Cadastro do CI</h1><br></center>
+		<center><h1><u>Cadastro do CI</u></h1><br></center>
 			
-		<br /><input type="text" size="70" placeholder="Nome do CI:"  id="nomeDoCI"/  ><br />
+		<br /><input type="text" size="40" placeholder="Nome do CI:"  id="nomeDoCI"/  ><br />
 			
-		<br /><input type="textarea" size="70" placeholder="Descrição:"  id="descricao"/  > <br />
-			
-		<br /><input type="time" size="70" placeholder="Horário de inicio:"  id="horarioDeInicio"/  >
-		
-		<input type="time" size="70" placeholder="Horário de Termino:"  id="horarioDeTermino"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Orientador:"  id="orientador"/  ><br />
-		
-		<br /><input type="number" size="80" placeholder="Quantidade de Vagas:"  id="quantidadeDeVagas"/  ><br />
-		
-		
 		
 			
-		<br /><input type="reset" id="cancelar" value="Cancelar">
+		<br /><b>Horário de inicio:</b>
+		<input type="time" size="70" id="horarioDeInicio"/  ><br />
 		
-		<input type="submit" id="enviar" value="confirmar"><br />
-	
+		<br /><b>Horário de Termino:</b>
+			<input type="time" size="70" id="horarioDeTermino"/  ><br />
+		
+		<br /><b>Data de inicio:</b>
+			<input type="date" size="70" id="dataDeInicio"/  ><br />
+		
+		<br /><b>Data de Termino:</b>
+			<input type="date" size="40" id="dataDeTermino"/  ><br />
+		
+		<br /><input type="text" size="40" placeholder="Orientador:"  id="orientador"/  ><br />
+		
+		<br /><input type="number" size="40" placeholder="Quantidade de Vagas:"  id="quantidadeDeVagas"/  ><br />
+		
+		<br /><input type="textarea" size="40" placeholder="Descrição:"  id="descricao"/  > <br />
+		
+<br /><button type="button" class="btn btn-danger btn">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
+		</button>
+		
+		<button type="button" class="btn btn-success btn">
+			<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Confimar
+		</button>
+		<br />
+		
 	
 	</div>	
 	</form>

@@ -1,38 +1,54 @@
 <html>
 <head>
-	<title>Exclusão do Centro de Interesse</title>
-	
-	<link href="style.css" rel="stylesheet" />
+<title>Exclusão do Centro de Interesse</title>
+
+<link href="style.css" rel="stylesheet" />
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </head>
-	
-	<body>
+
+<body>
 	<form action="#">
 		<div id="container">
-		<center><h1>Exclusão do Centro de Interesse</h1><br></center>
-			
-		<br /><input type="text" size="70" placeholder="Nome do Centro de Interesse:"  id="NomeDoCentro"/  ><br />
-			
-					
-		<br /><input type="text" size="70" placeholder="Horário de inicio:"  id="horarioDeInicio"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Horário de Termino:"  id="horarioDeTermino"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Data de inicio:"  id="dataDeInicio"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Data de Termino:"  id="dataDeTermino"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Orientador:"  id="orientador"/  ><br />
-		
-		<br /><input type="text" size="70" placeholder="Motivo:"  id="motivo"/  ><br />
-		
-		
-		
-			
-		<br /><input type="reset" id="cancelar" value="Cancelar" />
-		
-		<input type="submit" id="enviar" value="confirmar" />
-		
+			<center>
+				<u><h2>Exclusão do Centro de Interesse</h2>
+					<br /></u>
+			</center>
+
+			<br />
+			<input type="text" size="70"
+				placeholder="Nome do Centro de Interesse:" id="NomeDoCentro"/  ><br />
+
+
+			<br />
+			<input type="text" size="70" placeholder="Horário de inicio:"
+				id="horarioDeInicio"/  ><br /> <br />
+			<input type="text" size="70" placeholder="Horário de Termino:"
+				id="horarioDeTermino"/  ><br /> <br />
+			<input type="text" size="70" placeholder="Data de inicio:"
+				id="dataDeInicio"/  ><br /> <br />
+			<input type="text" size="70" placeholder="Data de Termino:"
+				id="dataDeTermino"/  ><br /> <br />
+			<input type="text" size="70" placeholder="Orientador:"
+				id="orientador"/  ><br /> <br />
+			<input type="text" size="70" placeholder="Motivo:" id="motivo"/  ><br />
+
+
+
+			<br />
+			<button type="button" class="btn btn-danger btn">
+				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+				Cancelar
+			</button>
+
+			<button type="button" class="btn btn-success btn">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				Confimar
+			</button>
+			<br />
+
+
 		</div>
 	</form>
-	</body>
+</body>
 </html>

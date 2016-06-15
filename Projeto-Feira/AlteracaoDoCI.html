@@ -3,14 +3,17 @@
 
 	<title>Alteração do Centro de Interesse</title>
 	<link href="style.css" rel="stylesheet" />	
+	<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 </head>
 	
 	<body>
 	<form action="#">
 		<div id="container">
-		<center><h1>Alteração do Centro de Interesse</h1><br /></center>
+		<center><h2><u>Alteração do Centro de Interesse</u></h2><br /></center>
 		
-		Nome do Centro de Interesse:	
+		
+		<b>Nome do Centro de Interesse:</b>
 		<select id = "centrosDeCI />
 		<option id="centro">Centro de Interesse 1 </option>
 		<option id="musica">Música </option>
@@ -22,29 +25,35 @@
 		<option id="programacao">Programação </option> 
 		</select>
 			
-		<br />Horário de inicio:
+		<br /><br /><b>Horário de inicio:</b>
 			<input type="time" size="70" id="horarioDeInicio"/  ><br />
 		
-		<br />Horário de Termino:
+		<br /><b>Horário de Termino:</b>
 			<input type="time" size="70" id="horarioDeTermino"/  ><br />
 		
-		<br />Data de inicio:
+		<br /><b>Data de inicio:</b>
 			<input type="date" size="70" id="dataDeInicio"/  ><br />
 		
-		<br />Data de Termino:
+		<br /><b>Data de Termino:</b>
 			<input type="date" size="70" id="dataDeTermino"/  ><br />
 		
-		<br />Orientador:
-		<input type="text" size="70" placeholder="insira:" id="orientador"/  ><br />
+		<br /><input type="text" size="40" placeholder="Orientador:"  id="orientador"/  ><br />
 		
-		<br /><input type="text" size="70" placeholder="Quantidade de Vagas:"  id="quantidadeDeVagas"/  ><br />
+		
+		<br /><input type="number" size="40" placeholder="Quantidade de Vagas:"  id="quantidadeDeVagas"/  ><br />
 		
 		
 		
 			
-		<br /><input type="reset" id="cancelar" value="Cancelar" />
+		<br /><button type="button" class="btn btn-danger btn">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar
+		</button>
 		
-		<input type="submit" id="enviar" value="confirmar" />
+		<button type="button" class="btn btn-success btn">
+			<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Confimar
+		</button>
+		<br />
+		
 		
 		</div>
 	</form>
