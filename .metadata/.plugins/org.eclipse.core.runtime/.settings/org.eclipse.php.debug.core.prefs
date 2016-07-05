@@ -1,3 +1,0 @@
-eclipse.preferences.version=1
-org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=<settings><clientPort>9000</clientPort><ownerId>php-server-0c9dd5ae-de29-4ee7-96d3-9d050b08cd71</ownerId><proxyIdeKey>ECLIPSE_DBGP_xxx</proxyIdeKey><proxyAddress></proxyAddress><proxyEnable>false</proxyEnable></settings>
-org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientPort>10137</clientPort><ownerId>php-server-0c9dd5ae-de29-4ee7-96d3-9d050b08cd71</ownerId><clientIp>192.168.100.124,192.168.56.1,127.0.0.1</clientIp><responseTimeout>60000</responseTimeout></settings>
