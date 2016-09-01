@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Inscrição do Centro de Interesse</title>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-<link href="http://fontawesome.io/icon/barcode/">
-<link href="estilo.css" rel="stylesheet" />
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Inscrição do Centro de Interesse</title>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+		<link href="http://fontawesome.io/icon/barcode/">
+		<link href="estilo.css" rel="stylesheet" />
+		
+		<script>
+			function funcaoConfirmacao(){
+				alert("Estou ciente que não poderei trocar de curso durante o semestre!");
+			}
+		</script>
+	</head>
 <body>
-
-<div class="testbox">
-  <h1>Inscrição</h1>
-
-  <form action="/">
-    
-  <hr>
-  <label id="icon" for="name"><i class="icon-envelope "></i></label>
-  <input type="text" name="name" id="name" placeholder="Email" required/>
-  
-  <br /><label id="icon" for="name"><i class="icon-user"></i></label>
-  <input type="text" name="name" id="name" placeholder="Name" required/>
-  
-  <br /><label id="icon" for="name"><i class="icon-shield"></i></label>
-  <input type="password" name="name" id="name" placeholder="Senha" required/>
-  
-  <br /><label id="icon" for="name"><i class="icon-fa-barcode"></i></label>
-  <input type="text" name="name" id="name" placeholder="Código do Aluno" required/>
-  
-  	<br /><br />
-			<select name="centroUm" />
-			<option id="centro">Centro de Interesse 1</option>
-			<option id="musica">Música</option>
-			<option id="teatro">Teatro</option>
-			<option id="danca">Dança</option>
-			<option id="espanhol">Espanhol</option>
-			<option id="ingles">Ingles</option>
-			<option id="futsal">Futsal</option>
-			<option id="programacao">Programação</option>
-			
-			</select> <select name="centroDois" />
-			<option id="centro">Centro de Interesse 2</option>
-			<option id="musica">Música</option>
-			<option id="teatro">Teatro</option>
-			<option id="danca">Dança</option>
-			<option id="espanhol">Espanhol</option>
-			<option id="ingles">Ingles</option>
-			<option id="futsal">Futsal</option>
-			<option id="programacao">Programação</option>
-			</select> <br />
+	<div class="testbox container">
+		<h1>Inscrição</h1>
+		
+		<form id="formulario" action="salvar-inscricao.php" method="post" >
+			<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-envelope"></i></span>
+				<input class="form-control" type="email" placeholder="Email" required name="email" id="email"/>
+			</div>
 			<br />
+   			<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-user"></i></span>
+				<input class="form-control" type="text" placeholder="Nome" required name="nome" id="nome"/>
+			</div>
+	    	<br />
+	    	<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-shield"></i></span>
+				<input class="form-control" type="password" placeholder="Senha" required name="senha" id="senha"/>
+			</div>
+			<br />
+	    	<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-barcode"></i></span>
+				<input class="form-control" type="text" placeholder="Código do aluno" required name="codigo-aluno" id="codigo-aluno"/>
+			</div>
+			
+			
+			<br />
+			<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-list"></i></span>
+				<select name="centro-um" id="centro-um" class="form-control" >
+					<option id="centro">Centro de Interesse 1</option>
+					<option id="musica">Música</option>
+					<option id="teatro">Teatro</option>
+					<option id="danca">Dança</option>
+					<option id="espanhol">Espanhol</option>
+					<option id="ingles">Ingles</option>
+					<option id="futsal">Futsal</option>
+					<option id="programacao">Programação</option>
+				</select>
+			</div>
+		
+		<br />
+			<div class="input-group margin-bottom-sm">
+				<span class="input-group-addon icon"><i class="fa fa-list"></i></span>
+				<select name="centro-dois" id="centro-dois" class="form-control" >
+					<option id="centro">Centro de Interesse 2</option>
+					<option id="musica">Música</option>
+					<option id="teatro">Teatro</option>
+					<option id="danca">Dança</option>
+					<option id="espanhol">Espanhol</option>
+					<option id="ingles">Ingles</option>
+					<option id="futsal">Futsal</option>
+					<option id="programacao">Programação</option>
+				</select>
+			</div>
+<br />  
   
-  <div class="gender">
+   
+   <div id="botao">
+   <div class="gender">
     <input type="radio" value="None" id="male" name="gender" checked/>
     <label for="male" class="radio" chec>Masculino</label>
     
     <input type="radio" value="None" id="female" name="gender" />
   	 <label for="female" class="radio"> Feminino</label>
    </div> 
-   <p>Estou ciente que não poderei trocar de curso durante o semestre .</p>
-   <a href="#" class="button">Registrar</a>
+   
+   <input class="button" type="reset" value="Cancelar" />
+  	<input class="button" type="submit" onclick="funcaoConfirmacao()" value="Registrar" />
+     </div>
   </form>
 </div>
 

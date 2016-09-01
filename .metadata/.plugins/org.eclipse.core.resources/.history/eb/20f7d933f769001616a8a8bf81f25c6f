@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Inscrição do Centro de Interesse</title>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+		<link href="http://fontawesome.io/icon/barcode/">
+		<link href="estilo.css" rel="stylesheet" />
+		
+	
+		</script>
+	</head>
+<body>
+	<div class="testbox container">
+	<h1>Quiz</h1>
+		
+	<h1>Questão #1 -They ran very _______ in the race but at the end they could ______ breathe.</h1>
+		
+
+	
+    <input type="radio" value="None" id="female" name="gender" />
+  	 <label for="female" class="radio"> fast, harder</label><br />
+  	 
+  	  <input type="radio" value="None" id="female" name="gender" />
+  	 <label for="female" class="radio"> fast, harder</label>
+  	 
+  	  <input type="radio" value="None" id="female" name="gender" />
+  	 <label for="female" class="radio"> fast, harder</label>
+  	 
+  	  <input type="radio" value="None" id="female" name="gender" />
+  	 <label for="female" class="radio"> fast, harder</label>
+  	 
+  	 
+   </div> 
+   
+   <input class="button" type="reset" value="Cancelar" />
+  	<input class="button" type="submit" onclick="funcaoConfirmacao()" value="Registrar" />
+     </div>
+  </form>
+
+
+</body>
+</html>
