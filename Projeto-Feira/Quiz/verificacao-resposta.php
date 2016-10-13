@@ -1,46 +1,75 @@
-<?php 
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
+ï»¿<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>VerificaÃ§Ã£o Resposta</title>
+		
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width">
+		  
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+		<link href="http://fontawesome.io/icon/barcode/">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+		<link href="style-index_quiz.css" rel="stylesheet" />
+		
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="quiz">	
+					<?php
+						ini_set('default_charset','UTF-8');
+						header('Content-type: text/html; charset=utf-8');
+						$idAlternativaSelecionada = (int)$_POST['opcao'];
+						
+						
+						
+						include 'conexao.php';
 
-/*configurco de cesso o bnco de ddos*/
-$nome_banco = "bd-questao";
+						
+						// Corrige a codificaÃ§Ã£o
+						mysql_query("SET NAMES 'utf8'");
+						mysql_query('SET character_set_connection=utf8');
+						mysql_query('SET character_set_client=utf8');
+						mysql_query('SET character_set_results=utf8');
+						
+						$sql = "SELECT certo, justificativa FROM alternativas WHERE id_alternativa = $idAlternativaSelecionada";
+						$query = mysql_query($sql);
+						
+						
+						
+						
+						while($dados = mysql_fetch_assoc($query)){
+							$certo = (int)$dados['certo'];
+							$justificativa = $dados['justificativa'];
+						}
+						
+						
+						if ($certo){
+							echo "<h1>Voce acertou!<br /><br />
+									$justificativa</h1>
+									";
+						}else{
+							echo "<h1>Voce errou!<br /><br />
+									$justificativa</h1>
+									";
+						}
+						
+						
+						
+						
+						?>
+						<a href="index-quiz.php">Clique aqui para uma nova questÃ£o </a>
+				</div>
+			
+			<footer class="row footer">
+			
+			</footer>	
 
-$conexao = mysql_connect($servidor, $usuario, $senha);
-
-/*verifica se a conexao realmente foi criada*/
-/*se (nao conexao) entao, ou seja, conexao e falsa*/
-
-if (!$conexao) {
-	echo "Não foi possível connectar ao servidor";
-	exit;
-}else{/*senao*/
-	"<h1>Conectou</h1>";
-}
-
-/*Selecione o banco de dados ou morra*/
-$banco = mysql_select_db($nome_banco, $conexao) or die ("Não foi possível conectar ao banco de dados");
-
-
-$comandosql = "SELECT  resposta FROM tb_resposta WHERE id_questao-um = ".$opcao1;
-	$resultado = mysql_query($comandosql);
+		</div>
 	
-	if (mysql_errno()) {
-		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
-		echo $error;
-	}
-	$itembancodados = mysql_fetch_array($resultado);
-	$qtdevagas1 = $itembancodados['quantidade_vagas'];
-	
-	
-	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE opcao_um=".$opcao1;
-	$resultado = mysql_query($comandosql);
-	$itembancodados = mysql_fetch_assoc($resultado);
-	$qtdeinscritosc1 = $itembancodados['total'];
-	
-	if ($qtdeinscritosc1 >= $qtdevagas1){
-		echo "<h1>Não existem vagas na sua primeira opção, tente novamente</h1>";
-		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
-		$podeinserir=false;
-	} 
-	?>		
+		
+	</body>
+</html>
